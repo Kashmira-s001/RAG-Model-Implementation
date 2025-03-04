@@ -1,0 +1,28 @@
+RAG-Based Question Answering System
+This repository contains a Retrieval-Augmented Generation (RAG) model built using FAISS for document retrieval and Falcon-7B (Hugging Face) for text generation. The system enables efficient question answering (QA) using a knowledge base.
+
+🚀 Project Overview
+🔹 Objective: Build a RAG-based QA system that retrieves relevant context from stored documents and generates accurate responses.
+🔹 Retrieval Mechanism: Uses FAISS to store and search embedded documents.
+🔹 Language Model: Leverages Hugging Face's Falcon-7B API for response generation.
+🔹 Implementation: Structured in a Google Colab notebook with step-by-step explanations.
+
+🛠️ Tech Stack
+Python (for data processing and model integration)
+FAISS (for efficient vector search)
+Hugging Face Transformers (for embeddings & text generation)
+Google Colab (for execution & documentation)
+Requests (for API calls)
+
+🏗️ How It Works
+1️⃣ Document Storage & Embeddings
+Text documents are embedded using Hugging Face's text embeddings.
+FAISS stores these embeddings for fast similarity search.
+2️⃣ Retrieval Mechanism
+The system takes a user query, converts it into an embedding, and retrieves the top-k relevant document chunks.
+3️⃣ Response Generation
+The retrieved context and query are passed to Falcon-7B, which generates a well-informed answer.
+
+🔑 Environment Variables
+Ensure you do not hardcode API keys in the notebook.
+Store them securely using an .env file (ignored via .gitignore):
